@@ -12,7 +12,7 @@ g = 9.80665;
 rho = 1.225;
 M0 = 1630;
 W = M0 * g / 1000;
-mu = 0.01;
+mu = 0.1;
 
 
 C4 = (-1.05^2/(g*rho*C_Lmax));
@@ -23,4 +23,4 @@ C0 = s_TO * (rho*v_hw^2/4) * (mu * C_Lgr - C_D0 - C_Lgr^2/(pi*e*AR));
 
 results = roots([C4 C3 C2 C1 C0]);
 
-W_S_takeoff = results(4)^2 * g  %???? maybe??????????
+W_S_takeoff = results(4)^2 * g  %???? units are not consistent but meh it looks like it works
