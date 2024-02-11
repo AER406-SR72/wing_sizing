@@ -23,4 +23,4 @@ C0 = s_TO * (rho*v_hw^2/4) * (mu * C_Lgr - C_D0 - C_Lgr^2/(pi*e*AR));
 
 results = roots([C4 C3 C2 C1 C0]);
 
-W_S_takeoff = results(4)^2 * g  %???? units are not consistent but meh it looks like it works
+W_S_takeoff = results(1)^2 / g  % not sure between 1st and 4th root; 4th root is way too small
